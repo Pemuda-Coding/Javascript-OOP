@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Constructor</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor(firstName) {
+          this.firstName = firstName;
+        }
+
+        sayHello(name) {
+          console.log(`Hello ${name}, my name is employee ${this.firstName}`);
+        }
+      }
+
+      class Manager extends Employee {
+        constructor(firstName, lastName) {
+          //Fungsi kata super adalah untuk mengambil constructor yang berada di dalam constructor Employee
+
+          super(firstName);
+          this.lastName = lastName;
+        }
+
+        sayHello(name) {
+          console.log(`Hello ${name}, my name is manager ${this.firstName}`);
+        }
+      }
+
+      const budi = new Employee("Budi");
+      budi.sayHello("Joko");
+
+      const syafiq = new Manager("Syafiq", "Rizky");
+      syafiq.sayHello("Joko");
+
+      console.log(budi);
+      console.log(syafiq);
+    </script>
+  </body>
+</html>

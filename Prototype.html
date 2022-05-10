@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+  </head>
+  <body>
+    <script>
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHellp = function (name) {
+          console.log(`Hello ${name}, My name is ${this.firstName}`);
+        };
+      }
+
+      // Menambahkan property ke prototype
+      Person.prototype.sayBye = function () {
+        console.log("Good Bye");
+      };
+
+      Person.prototype.run = function () {
+        console.log(`${this.firstName} is running`);
+      };
+
+      const Eko = new Person("Eko", "Khannedy");
+      const Syafiq = new Person("Syafiq", "Rizky");
+
+      console.log(Eko);
+      console.log(Syafiq);
+    </script>
+  </body>
+</html>

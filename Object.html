@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      //Object
+      const eko = {
+        firstName: "Syafiq",
+        lastName: "Rizky",
+      };
+
+      // Constructor Function di tandai dengan huruf awal functionnya uppercase
+      function Person() {
+        // Property di constructor Function
+        (this.firstName = ""), (this.lastName = "");
+      }
+
+      const Syafiq = new Person();
+      Syafiq.firstName = "Syafiq";
+      Syafiq.middleName = "Rizky";
+      Syafiq.lastName = "Fauzi";
+      const Memeng = new Person();
+      Memeng.firstName = "Memeng";
+      Memeng.lastName = "Momo";
+
+      console.info(Syafiq);
+      console.info(Memeng);
+    </script>
+  </body>
+</html>

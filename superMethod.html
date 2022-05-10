@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Method</title>
+  </head>
+  <body>
+    <script>
+      class Shape {
+        paint() {
+          console.log("Paint Shape");
+        }
+      }
+
+      class Circle extends Shape {
+        paint() {
+          super.paint(); //Memanggil paint() method parent class
+          console.log("Paint Circle");
+        }
+      }
+
+      const Syafiq = new Shape();
+      Syafiq.paint();
+      const Budi = new Circle();
+      Budi.paint();
+
+      console.log(Syafiq);
+      console.log(Budi);
+    </script>
+  </body>
+</html>
